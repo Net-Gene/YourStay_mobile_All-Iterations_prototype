@@ -1,0 +1,639 @@
+{
+  "home":{
+    "appTitle": "Hostel Self-Check-in System",
+    "appSubtitle": "Hospitality solution",
+    "welcome": "Welcome",
+    "welcomeGuest": "Welcome, {{name}}!",
+    "login": "Login",
+    "logout": "Log Out",
+    "allDone": "All Done",
+    "selectLanguage": "Select language",
+    "back": "Back",
+    "next": "Next",
+    "complete": "Complete",
+    "cancel": "Cancel",
+    "save": "Save",
+    "update": "Update",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "close": "Close",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "warning": "Warning",
+    "info": "Information",
+    "developmentPhases": "Development Phases",
+    "startCheckinProcess": "Start Check-in Process",
+    "room": "Room {{number}}",
+    "hours247": "24/7",
+    "publicAccess": "Public access",
+    "staffPanel": "Staff App Panel",
+    "features": {
+      "qrPinAccess": "QR/PIN room access",
+      "digitalTravelCard": "Digital travel card",
+      "multilingualChat": "Multilingual chat",
+      "foodOrdering": "Food ordering",
+      "kioskCheckin": "Kiosk check-in",
+      "rfidWristband": "RFID wristband",
+      "appGuidance": "App guidance",
+      "synchronizedData": "Synchronized data",
+      "realtimeSync": "Real-time sync",
+      "staffInterfaces": "Staff interfaces",
+      "advancedAnalytics": "Advanced analytics",
+      "offlineFallback": "Offline fallback"
+    },
+  
+
+    "phases": {
+      "mobileOnly": "Phase 1: Mobile-Only",
+      "mobileOnlyDesc": "Complete self-service via mobile app",
+      "appKiosk": "Phase 2: App + Kiosk",
+      "appKioskDesc": "Parallel use with physical kiosk",
+      "fullIntegration": "Phase 3: Full Integration",
+      "fullIntegrationDesc": "Complete ecosystem integration",
+      "active": "Active"
+    }
+    
+  },
+  "check-in":{
+    
+    "features": {
+      "qrPinAccess": "QR/PIN room access",
+      "digitalTravelCard": "Digital travel card",
+      "multilingualChat": "Multilingual chat",
+      "foodOrdering": "Food ordering",
+      "kioskCheckin": "Kiosk check-in",
+      "rfidWristband": "RFID wristband",
+      "appGuidance": "App guidance",
+      "synchronizedData": "Synchronized data",
+      "realtimeSync": "Real-time sync",
+      "staffInterfaces": "Staff interfaces",
+      "advancedAnalytics": "Advanced analytics",
+      "offlineFallback": "Offline fallback"
+    },
+  
+    
+    "checkin": {
+      "title": "Guest Check-in",
+      "mobileOnlyAccess": "Step 1: Mobile Only",
+      "noPhysicalWristband": "No Physical Wristband",
+      "stepOf": "Step {{current}} of {{total}}",
+      "bookingConfirmation": "Booking Confirmation",
+      "confirmationNumber": "Confirmation Number",
+      "confirmationPlaceholder": "Enter your booking confirmation",
+      "emailAddress": "Email Address",
+      "emailPlaceholder": "your.email@example.com",
+      "bookingSource": "Booking Source",
+      "verifyBooking": "Verify Booking",
+      "digitalTravelCard": "Digital Travel Card",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "nationality": "Nationality",
+      "selectNationality": "Select nationality",
+      "purposeOfVisit": "Purpose of Visit",
+      "selectPurpose": "Select purpose",
+      "arrivalDate": "Arrival Date",
+      "departureDate": "Departure Date",
+      "specialRequests": "Special Requests (Optional)",
+      "specialRequestsPlaceholder": "Any special requests or dietary requirements...",
+      "completeTravelCard": "Complete Travel Card",
+      "digitalRoomKey": "Your Digital Room Key",
+      "roomAssignment": "Your room assignment",
+      "pinAccess": "PIN Access",
+      "qrAccess": "QR Code",
+      "roomPin": "Your 4-digit room PIN",
+      "qrCodeScan": "Scan this QR code at your room",
+      "rfidAvailable": "RFID Wristband Available",
+      "collectWristband": "Collect your RFID wristband from the kiosk.",
+      "wristbandAccess": "Your RFID wristband provides access to rooms and facilities.",
+      "completeCheckin": "Complete Check-in"
+    },
+    "purposes": {
+      "tourism": "Tourism",
+      "business": "Business",
+      "education": "Education",
+      "other": "Other"
+    },
+    "countries": {
+      "us": "United States",
+      "uk": "United Kingdom",
+      "de": "Germany",
+      "fr": "France",
+      "es": "Spain",
+      "ru": "Russia",
+      "cn": "China",
+      "jp": "Japan",
+      "nl": "Netherlands",
+      "ee": "Estonia",
+      "no": "Norway",
+      "ch": "Switzerland",
+      "it": "Italy",
+      "pl": "Poland",
+      "dk": "Denmark",
+      "au": "Australia",
+      "in": "India",
+      "at": "Austria",
+      "be": "Belgium",
+      "se": "Sweden",
+      "other": "Other"
+    },
+    "bookingSources": {
+      "booking": "Booking.com",
+      "hostelworld": "Hostelworld",
+      "expedia": "Expedia",
+      "direct": "Direct Booking"
+    },
+    "navigation": {
+      "home": "Home",
+      "checkin": "Check-in",
+      "dashboard": "Dashboard",
+      "food": "Food",
+      "chat": "Chat",
+      "guide": "Guide",
+      "admin": "Admin"
+    } 
+  },
+  
+  
+
+  "dashboard": {
+    "title": "Your stay dashboard",
+    "welcome": "Welcome {{name}}!",
+    
+    "roomInformation": "Room Information",
+    "roomNumber": "Room Number",
+    
+    "accessPin": "Access PIN",
+    "checkIn": "Check-in",
+    "checkOut": "Check-out",
+    "rfidActive": "RFID Active",
+    "wristbandId": "Wristband ID",
+    "facilityStatus": "Facility Status",
+    "quickActions": {
+      "title": "Quick Actions",
+      "chatSupport": "Chat Support",
+      "chatSupportDesc": "Get help from staff",
+      "foodOrdering": "Food Ordering",
+      "foodOrderingDesc": "Order meals & snacks",
+      "facilityGuide": "Facility Guide",
+      "facilityGuideDesc": "Navigate the hostel"
+    },
+    "facilities": {
+      
+      "freeWifi": "Free WiFi",
+      "foodOrdering": "Food ordering",
+      "parking": "Parking",
+      "aiChat": "AI Chat",
+      "humanChat": "Human Chat",
+      "available": "Available",
+      "available247": "Available 24/7",
+      "notFull": "Not Full",
+      "openUntil": "Open until {{time}}"
+    }
+  },
+  "chat-support": {    
+    "chat": {
+      "title": "Chat Support",
+      "greeting": "Hello, how can we assist you today?",
+      "subtitle": "Get help from our staff",
+      "liveSupport": "AI Support",
+      "online": "Online",
+      "offline": "Offline",
+      "translation": "Translation",
+      "on": "ON",
+      "off": "OFF",
+      "typePlaceholder": "Type your message...",
+      "staffTyping": "Staff is typing...",
+      "original": "Original",
+      "back": "Back",
+      "quickQuestions": {
+        "wifi": "What's the WiFi password?",
+        "breakfast": "When is breakfast served?",
+        "laundry": "How do I do laundry?",
+        "checkout": "What time is checkout?",
+        "metro": "Where is the nearest metro?"
+      },
+      "responses": {
+        "staffErrorResponse": "Sorry, I didn't understand that. Can you please rephrase?",
+        "help": "I'll help you with that right away!",
+        "wifi": "The WiFi password is: hostel2024. You can connect to 'HostelGuest' network.",
+        "breakfast": "Breakfast is served from 7:00 AM to 10:00 AM in the common area. You can also order through the app!",
+        "checkout": "Checkout is at 11:00 AM. You can extend your stay through the app if rooms are available.",
+        "laundry": "The laundry room is on the ground floor. Washing costs €3, drying €2. Use your RFID wristband to pay."
+      }
+    }
+  },
+  
+
+
+  "foodOrdering": {
+    "title": "Food Ordering",
+    "subtitle": "Order meals and snacks",
+    "menu": "Menu",
+    "cart": "Cart ({{count}})",
+    "orders": "Orders",
+    "breakfast": "Breakfast",
+    "snacks": "Snacks",
+    "beverages": "Beverages",
+    "unavailable": "Unavailable",
+    "cartEmpty": "Your cart is empty",
+    "each": "each",
+    "total": "Total",
+    "placeOrder": "Place Order",
+    "noOrders": "No orders yet",
+    "orderNumber": "Order #{{number}}",
+    "items": "Items",
+    "ordered": "Ordered",
+    "estimatedReady": "Estimated Ready",
+    "ready": "Ready",
+    "preparing": "Preparing",
+    "delayed": "Delayed",
+    "delivered": "Delivered"
+  },
+
+  "menuItems": {
+    "continentalBreakfast": "Continental Breakfast",
+    "continentalBreakfastDesc": "Bread, jam, butter, coffee/tea",
+    "fullEnglishBreakfast": "Full English Breakfast",
+    "fullEnglishBreakfastDesc": "Eggs, bacon, sausage, beans, toast",
+    "pancakes": "Pancakes",
+    "pancakesDesc": "Stack of 3 with syrup and butter",
+    "sandwich": "Sandwich",
+    "sandwichDesc": "Ham & cheese or vegetarian",
+    "instantNoodles": "Instant Noodles",
+    "instantNoodlesDesc": "Various flavors available",
+    "freshFruit": "Fresh Fruit",
+    "freshFruitDesc": "Seasonal selection",
+    "coffee": "Coffee",
+    "coffeeDesc": "Espresso, cappuccino, or americano",
+    "tea": "Tea",
+    "teaDesc": "Black, green, or herbal",
+    "softDrinks": "Soft Drinks",
+    "softDrinksDesc": "Coke, Sprite, Orange"
+  },
+
+  "facility-guide": {
+    "facility": {
+      "sharedBathrooms": "Shared Bathrooms",
+      "gym": "Gym",
+      "wifi": "WiFi Internet",
+      "parking": "Parking",
+      "kitchen": "Small dining/kitchen Area",
+      "locationDownstairs": "Downstairs Floor",
+      "locationThroughout": "Throughout building",
+      "locationBehind": "Behind building",
+      "hours247": "24/7",
+      "sharedBathroomsDescriptions": "Private shower units in shared bathroom areas. RFID wristband required.",
+      "gymDescriptions": "A small gym with 90's gym equipment, very modest",
+      "wifiDescriptions": "Free high-speed internet access.",
+      "parkingDescriptions": "Limited parking spaces available.",
+      "kitchenDescriptions": "Fully equipped kitchen with stove, microwave, refrigerator, and utensils with table and 6 seating.",
+      "roomPin": "Room PIN",
+      "rfidWristband": "RFID wristband",
+      "publicAccess": "Public access",
+      "safetyCourseAccess": "Access is granted to those who diligently complete the safety-course",
+      "firstCome": "First come, first served",
+      "location": "Location",
+      "hours": "Hours",
+      "access": "Access",
+      "tips": "Tips",
+      "tipBringToiletries": "Bring your own toiletries",
+      "tipMax15min": "Maximum 15 minutes per session",
+      "tipKeepSecure": "Keep personal items secure",
+      "tipKeepClean": "Keep everything clean",
+      "tipRespectWorkouts": "Respect others workouts",
+      "tipRespectQuietHours": "Respect quiet hours after 22:00",
+      "tipFast": "Very fast",
+      "tipUseWifi": "Reccomended to use, instead of wasting mobile data",
+      "tipRegisterEasypark": "Register at the EASYPARK app",
+      "tipNotGuaranteed": "Not guaranteed",
+      "tipCleanUp": "Clean up after use",
+      "tipLabelFood": "Label your food",
+      "tipPrepMeals": "Good place for prepping your meals before going out"
+    },
+    "accessInstructions": {
+      "mobileOnly": {
+        "roomAccess": {
+          "title": "Room Access",
+          "step1": "Go to your assigned room door",
+          "step2": "Enter the 4-digit PIN on the keypad",
+          "step3": "Wait for the green light, then enter",
+          "step4": "Door will lock automatically after closing"
+        },
+        "facilityAccess": {
+          "title": "Facility Access",
+          "step1": "Use your room PIN to access shared areas",
+          "step2": "Ensure your phone remains charged for digital access"
+        },
+        "appFeatures": {
+          "title": "App Features",
+          "step1": "View facility usage analytics",
+          "step2": "Make secure payments via trusted providers (e.g., PayPal, Google Pay)",
+          "step3": "Access emergency protocols if needed",
+          "step4": "Order food from the app",
+          "step5": "Chat with our AI assistant",
+          "step6": "Report urgent issues directly to hostel staff"
+        }
+      },
+      "app+Kiosk": {
+        "rfidWristbandSetup": {
+          "title": "RFID Wristband Setup",
+          "step1": "Pick up your RFID wristband at the kiosk after check-in",
+          "step2": "Tap the wristband on any RFID reader",
+          "step3": "Green light indicates successful access",
+          "step4": "Wear your wristband throughout your stay"
+        },
+        "backupAccess": {
+          "title": "Backup Access",
+          "step1": "Use your mobile PIN if the wristband doesn't work",
+          "step2": "Contact staff for a replacement wristband (fees may apply)",
+          "step3": "Reactivation available via kiosk with ID verification"
+        },
+        "kioskFeatures": {
+          "title": "Kiosk Features",
+          "step1": "Register directly at the kiosk"
+        },
+        "appFeatures": {
+          "title": "App Features",
+          "step1": "Track facility usage with analytics",
+          "step2": "Automatic billing for paid services",
+          "step3": "Order food conveniently",
+          "step4": "Chat with the AI assistant",
+          "step5": "Report urgent issues to the hostel management"
+        }
+      },
+      "fullIntegration": {
+        "seamlessAccess": {
+          "title": "Seamless Access",
+          "step1": "Use your RFID wristband for all room and facility access",
+          "step2": "Enjoy real-time sync across all devices and systems",
+          "step3": "Wristband usage is tracked to improve service quality"
+        },
+        "rfidWristbandSetup": {
+          "title": "RFID Wristband Setup",
+          "step1": "Pick up your RFID wristband at the kiosk after check-in",
+          "step2": "Tap the wristband on any RFID reader",
+          "step3": "Green light indicates successful access",
+          "step4": "Wear your wristband throughout your stay"
+        },
+        "backupAccess": {
+          "title": "Backup Access",
+          "step1": "Use your mobile PIN if the wristband doesn't work",
+          "step2": "Contact staff for a replacement wristband (fees may apply)",
+          "step3": "Reactivation available via kiosk with ID verification"
+        },
+        "kioskFeatures": {
+          "title": "Kiosk Features",
+          "step1": "View and manage automatic billing for services",
+          "step2": "Order food quickly",
+          "step3": "Chat with the AI assistant",
+          "step4": "Report urgent issues to hostel management"
+        },
+        "appFeatures": {
+          "title": "App Features",
+          "step1": "Access real-time facility usage data",
+          "step2": "View and manage paid services with automatic billing",
+          "step3": "Order food directly in-app",
+          "step4": "Chat with AI support",
+          "step5": "Report urgent concerns to hostel management"
+        }
+      }
+    },
+    "safety": {
+      "security": "Security",
+      "neverShare": "Never share your PIN or wristband",
+      "reportLost": "Report lost wristbands or lost valuables immediately",
+      "lockRoom": "Lock your room when leaving",
+      "keepValuables": "Keep your valuables safe",
+      "quietHours": "Quiet Hours",
+      "quietHoursTime": "Quiet hours: 22:00 - 07:00",
+      "keepNoiseMin": "Keep noise to minimum during these hours",
+      "useHeadphones": "Use headphones for entertainment",
+      "respectSleep": "Respect other guests' sleep",
+      "payments": "Payments",
+      "contactless": "Most services accept contactless payments",
+      "checkPaymentApp": "Check connected payment solution in mobile app"
+    },
+    "facilityGuide": {
+      "title": "Facility Guide",
+      "subtitle": "Learn about our facilities, access methods, and safety guidelines.",
+      "mobileAccess": "Mobile-only access",
+      "rfidMobile": "RFID wristband + mobile app",
+      "fullIntegration": "Full system integration"
+    },
+    "tabs": {
+      "facilities": "Facilities",
+      "accessGuide": "Access Guide",
+      "safety": "Safety"
+    },
+    "common": {
+      "back": "Back"
+    }
+  },
+
+  "facilityGuide": {
+    "title": "Facility Guide",
+    "subtitle": "Navigate and use hostel facilities",
+    "mobileAccess": "Mobile Access",
+    "rfidMobile": "RFID + Mobile",
+    "fullIntegration": "Full Integration",
+    "facilities": "Facilities",
+    "accessGuide": "Access Guide",
+    "safety": "Safety",
+    "location": "Location",
+    "hours": "Hours",
+    "access": "Access",
+    "tips": "Tips",
+    "roomAccess": "Room Access",
+    "facilityAccess": "Facility Access",
+    "rfidSetup": "RFID Wristband Setup",
+    "backupAccess": "Backup Access",
+    "kioskFeatures": "Kiosk Features",
+    "appFeatures": "App Features",
+    "seamlessAccess": "Seamless Access"
+  },
+
+  "facilityNames": {
+    "sharedBathrooms": "Shared Bathrooms",
+    "gym": "Gym",
+    "wifiInternet": "WiFi Internet",
+    "parking": "Parking",
+    "diningArea": "Small dining/kitchen Area"
+  },
+
+  "facilityDescriptions": {
+    "sharedBathrooms": "Private shower units in shared bathroom areas. RFID wristband required.",
+    "gym": "A small gym with 90's gym equipment, very modest",
+    "wifiInternet": "Free high-speed internet access.",
+    "parking": "Limited parking spaces available.",
+    "diningArea": "Fully equipped kitchen with stove, microwave, refrigerator, and utensils with table and 6 seating."
+  },
+
+  "facilityLocations": {
+    "downstairsFloor": "Downstairs Floor",
+    "throughoutBuilding": "Throughout building",
+    "behindBuilding": "Behind building"
+  },
+
+  "facilityAccess": {
+    "roomPin": "Room PIN",
+    "rfidWristband": "RFID wristband",
+    "publicAccess": "Public access",
+    "safetyCoursRequired": "Access is granted to those who diligently complete the safety-course",
+    "firstComeFirstServed": "First come, first served"
+  },
+
+  "facilityTips": {
+    "bringToiletries": "Bring your own toiletries",
+    "maxSession": "Maximum 15 minutes per session",
+    "keepSecure": "Keep personal items secure",
+    "keepClean": "Keep everything clean",
+    "respectWorkouts": "Respect others workouts",
+    "respectQuietHours": "Respect quiet hours after 22:00",
+    "veryFast": "Very fast",
+    "recommendedUse": "Recommended to use, instead of wasting mobile data",
+    "registerEasypark": "Register at the EASYPARK app",
+    "notGuaranteed": "Not guaranteed",
+    "cleanAfterUse": "Clean up after use",
+    "labelFood": "Label your food",
+    "goodForPrepping": "Good place for prepping your meals before going out"
+  },
+
+  "accessInstructions": {
+    "roomAccess": {
+      "step1": "Go to your assigned room door",
+      "step2": "Enter the 4-digit PIN on the keypad",
+      "step3": "Wait for the green light, then enter",
+      "step4": "Door will lock automatically after closing"
+    },
+    "facilityAccess": {
+      "step1": "Use your room PIN to access shared areas",
+      "step2": "Ensure your phone remains charged for digital access"
+    },
+    "appFeatures": {
+      "step1": "View facility usage analytics",
+      "step2": "Make secure payments via trusted providers (e.g., PayPal, Google Pay)",
+      "step3": "Access emergency protocols if needed",
+      "step4": "Order food from the app",
+      "step5": "Chat with our AI assistant",
+      "step6": "Report urgent issues directly to hostel staff"
+    },
+    "rfidSetup": {
+      "step1": "Pick up your RFID wristband at the kiosk after check-in",
+      "step2": "Tap the wristband on any RFID reader",
+      "step3": "Green light indicates successful access",
+      "step4": "Wear your wristband throughout your stay"
+    },
+    "backupAccess": {
+      "step1": "Use your mobile PIN if the wristband doesn't work",
+      "step2": "Contact staff for a replacement wristband (fees may apply)",
+      "step3": "Reactivation available via kiosk with ID verification"
+    },
+    "seamlessAccess": {
+      "step1": "Use your RFID wristband for all room and facility access",
+      "step2": "Enjoy real-time sync across all devices and systems",
+      "step3": "Wristband usage is tracked to improve service quality"
+    }
+  },
+
+  "safety": {
+    "security": "Security",
+    "quietHours": "Quiet Hours",
+    "payments": "Payments",
+    "securityTips": {
+      "tip1": "Never share your PIN or wristband",
+      "tip2": "Report lost wristbands or lost valuables immediately",
+      "tip3": "Lock your room when leaving",
+      "tip4": "Keep your valuables safe"
+    },
+    "quietHoursTips": {
+      "tip1": "Quiet hours: 22:00 - 07:00",
+      "tip2": "Keep noise to minimum during these hours",
+      "tip3": "Use headphones for entertainment",
+      "tip4": "Respect other guests' sleep"
+    },
+    "paymentsTips": {
+      "tip1": "Most services accept contactless payments",
+      "tip2": "Check connected payment solution in mobile app"
+    }
+  },
+  
+  "admin-panel":{
+    "title": "Admin Panel",
+    "subtitle": "Manage hostel operations",  
+    "guestManagement": "Guest Management",
+    "cleaningTasks": "Cleaning Tasks",
+    "foodOrders": "Food Orders",
+    "rfidNotAvailable": "RFID wristband management not available in mobile-only phase",
+    "markClean": "Mark Clean",
+    "markReady": "Mark Ready",
+    "invalidate": "Invalidate",
+    "replace": "Replace",
+    "totalGuests": "Total Guests",
+    "checkedIn": "Checked In",
+    "activeOrders": "Active Orders",
+    "occupancy": "Occupancy",
+    "room": "Room",
+    "tabs": {
+      "adminView": "Admin View",
+      "cleaningStaff": "Cleaning Staff",
+      "restaurantStaff": "Restaurant Staff",
+      "basicManagement": "Basic Management",
+      "enhancedFeatures": "Enhanced Features",
+      "fullAnalytics": "Full Analytics",
+      "wristbands": "Wristbands",
+      "overview": "Overview",
+      "guests": "Guests",
+      "support": "Support"
+    },
+    "systemPerformance": {
+      "averageRating": "Average Rating",
+      "completedOrdersToday": "Completed Orders Today",
+      "openSupportTickets": "Open Support Tickets",
+      "title": "System Performance"
+    },
+    "statuses": {
+      "update": "Update",
+      "priority": "Priority",
+      "active": "Active",
+      "ready": "Ready",
+      "preparing": "Preparing",
+      "delayed": "Delayed",
+      "delivered": "Delivered",
+      "clean": "Clean",
+      "dirty": "Dirty",
+      "cleaning": "Cleaning",
+      "open": "Open",
+      "inProgress": "In Progress",
+      "resolved": "Resolved",
+      "lost": "Lost",
+      "lowBattery": "Low Battery",
+      "checkoutSoon": "Checkout Soon"
+    }
+  },
+
+
+  
+
+  "priorities": {
+    "high": "High",
+    "medium": "Medium",
+    "low": "Low"
+  },
+
+  "times": {
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "tomorrow": "Tomorrow",
+    "checkedIn": "Checked in: {{time}}",
+    "checkingOut": "Checking out: {{time}}",
+    "orderedAt": "Ordered: {{time}}",
+    "assignedTo": "Assigned to: {{name}}",
+    "battery": "Battery: {{percentage}}"
+  }
+
+  
+
+  
+}
