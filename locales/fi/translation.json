@@ -138,7 +138,7 @@
       "expedia": "Expedia",
       "direct": "Suora varaus"
     },
-    "navigation": {
+    "admin-panel": {
       "home": "Etusivu",
       "checkin": "Sisäänkirjautuminen",
       "dashboard": "Yleiskatsaus",
