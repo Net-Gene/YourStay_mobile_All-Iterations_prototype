@@ -57,6 +57,7 @@
     
   },
   "check-in":{
+    "room": "Room {{number}}",
     
     "features": {
       "qrPinAccess": "QR/PIN room access",

@@ -36,6 +36,8 @@ export function CheckIn({ phase, onCheckInComplete }: CheckInProps) {
   const [accessMethod, setAccessMethod] = useState<"pin" | "qr">("pin")
   const [generatedPin, setGeneratedPin] = useState("")
   const [generatedQR, setGeneratedQR] = useState("")
+  const [roomNumber, setRoomNumber] = useState<string | null>(null);
+  
 
   const generateAccessCredentials = () => {
     const pin = Math.floor(1000 + Math.random() * 9000).toString()
@@ -49,12 +51,19 @@ export function CheckIn({ phase, onCheckInComplete }: CheckInProps) {
       setStep(2)
     }
   }
+  const GenerateRoomNumber = () => {
+    return Math.floor(100 + Math.random() * 200).toString()
+  };
+  const generatedRoom = GenerateRoomNumber();
+
 
   const handleTravelCardSubmit = () => {
+    setRoomNumber(generatedRoom);
     generateAccessCredentials()
     setStep(3)
   }
-
+  
+  
   const handleComplete = () => {
     const guestData = {
       ...bookingData,
@@ -63,7 +72,7 @@ export function CheckIn({ phase, onCheckInComplete }: CheckInProps) {
       qr: generatedQR,
       accessMethod,
       checkInTime: new Date().toISOString(),
-      roomNumber: Math.floor(100 + Math.random() * 200).toString(),
+      roomNumber: generatedRoom,
     }
     onCheckInComplete(guestData)
   }
@@ -300,7 +309,7 @@ export function CheckIn({ phase, onCheckInComplete }: CheckInProps) {
           <CardContent className="space-y-6">
             <div className="text-center space-y-2">
               <Badge variant="outline" className="text-lg px-4 py-2">
-                {t("room", { number: Math.floor(100 + Math.random() * 200) })}
+                {t("check-in.room", { number: roomNumber })}
               </Badge>
               <p className="text-sm text-muted-foreground">{t("check-in.checkin.roomAssignment")}</p>
             </div>
