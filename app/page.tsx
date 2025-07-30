@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -12,19 +12,36 @@ import { ChatSupport } from "@/components/chat-support"
 import { FacilityGuide } from "@/components/facility-guide"
 import { AdminPanel } from "@/components/admin-panel"
 import { LanguageSelector } from "@/components/language-selector"
-import { Smartphone, Monitor, Tablet, Users, Settings, LogOut } from "lucide-react"
+import { Smartphone, Monitor, Tablet, Settings, LogOut } from "lucide-react"
+import { useSearchParams } from "next/navigation"
 
 type Phase = "mobile-only" | "app-kiosk" | "full-integration"
 type View = "home" | "checkin" | "dashboard" | "food" | "chat" | "guide" | "admin"
 
+
 export default function HostelApp() {
-  const { t, i18n } = useTranslation()
+  const searchParams = useSearchParams()
+  const language = searchParams.get("lang") || "en"
+  
   const [currentPhase, setCurrentPhase] = useState<Phase>("mobile-only")
   const [currentView, setCurrentView] = useState<View>("home")
   const [isCheckedIn, setIsCheckedIn] = useState(false)
   const [guestData, setGuestData] = useState<any>(null)
+  const { t, i18n } = useTranslation()
+  const [ready, setReady] = useState(false)
 
-  const phases = {
+  useEffect(() => {
+    if (language && i18n.language !== language) {
+      i18n.changeLanguage(language).then(() => setReady(true))
+    } else {
+      setReady(true)
+    }
+  }, [language, i18n])
+
+  if (!ready) return null // or a loading spinner
+
+
+  const getPhases = () => ({
     "mobile-only": {
       title: t("home.phases.mobileOnly"),
       description: t("home.phases.mobileOnlyDesc"),
@@ -58,7 +75,10 @@ export default function HostelApp() {
         t("home.features.offlineFallback"),
       ],
     },
-  }
+  })
+
+  const phases = getPhases()
+
 
   const handleLogout = () => {
     setIsCheckedIn(false)
@@ -91,6 +111,7 @@ export default function HostelApp() {
         return <AdminPanel phase={currentPhase} />
       default:
         return (
+          
           <div className="space-y-6">
             <div className="text-center space-y-4">
               <h1 className="text-3xl font-bold">{t("home.appTitle")}</h1>

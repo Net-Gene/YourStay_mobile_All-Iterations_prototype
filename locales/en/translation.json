@@ -403,18 +403,24 @@
     },
     "safety": {
       "security": "Security",
-      "neverShare": "Never share your PIN or wristband",
-      "reportLost": "Report lost wristbands or lost valuables immediately",
-      "lockRoom": "Lock your room when leaving",
-      "keepValuables": "Keep your valuables safe",
       "quietHours": "Quiet Hours",
-      "quietHoursTime": "Quiet hours: 22:00 - 07:00",
-      "keepNoiseMin": "Keep noise to minimum during these hours",
-      "useHeadphones": "Use headphones for entertainment",
-      "respectSleep": "Respect other guests' sleep",
       "payments": "Payments",
-      "contactless": "Most services accept contactless payments",
-      "checkPaymentApp": "Check connected payment solution in mobile app"
+      "securityTips": {
+        "tip1": "Never share your PIN or wristband",
+        "tip2": "Report lost wristbands or lost valuables immediately",
+        "tip3": "Lock your room when leaving",
+        "tip4": "Keep your valuables safe"
+      },
+      "quietHoursTips": {
+        "tip1": "Quiet hours: 22:00 - 07:00",
+        "tip2": "Keep noise to minimum during these hours",
+        "tip3": "Use headphones for entertainment",
+        "tip4": "Respect other guests' sleep"
+      },
+      "paymentsTips": {
+        "tip1": "Most services accept contactless payments",
+        "tip2": "Check connected payment solution in mobile app"
+      }
     },
     "facilityGuide": {
       "title": "Facility Guide",
@@ -433,132 +439,7 @@
     }
   },
 
-  "facilityGuide": {
-    "title": "Facility Guide",
-    "subtitle": "Navigate and use hostel facilities",
-    "mobileAccess": "Mobile Access",
-    "rfidMobile": "RFID + Mobile",
-    "fullIntegration": "Full Integration",
-    "facilities": "Facilities",
-    "accessGuide": "Access Guide",
-    "safety": "Safety",
-    "location": "Location",
-    "hours": "Hours",
-    "access": "Access",
-    "tips": "Tips",
-    "roomAccess": "Room Access",
-    "facilityAccess": "Facility Access",
-    "rfidSetup": "RFID Wristband Setup",
-    "backupAccess": "Backup Access",
-    "kioskFeatures": "Kiosk Features",
-    "appFeatures": "App Features",
-    "seamlessAccess": "Seamless Access"
-  },
-
-  "facilityNames": {
-    "sharedBathrooms": "Shared Bathrooms",
-    "gym": "Gym",
-    "wifiInternet": "WiFi Internet",
-    "parking": "Parking",
-    "diningArea": "Small dining/kitchen Area"
-  },
-
-  "facilityDescriptions": {
-    "sharedBathrooms": "Private shower units in shared bathroom areas. RFID wristband required.",
-    "gym": "A small gym with 90's gym equipment, very modest",
-    "wifiInternet": "Free high-speed internet access.",
-    "parking": "Limited parking spaces available.",
-    "diningArea": "Fully equipped kitchen with stove, microwave, refrigerator, and utensils with table and 6 seating."
-  },
-
-  "facilityLocations": {
-    "downstairsFloor": "Downstairs Floor",
-    "throughoutBuilding": "Throughout building",
-    "behindBuilding": "Behind building"
-  },
-
-  "facilityAccess": {
-    "roomPin": "Room PIN",
-    "rfidWristband": "RFID wristband",
-    "publicAccess": "Public access",
-    "safetyCoursRequired": "Access is granted to those who diligently complete the safety-course",
-    "firstComeFirstServed": "First come, first served"
-  },
-
-  "facilityTips": {
-    "bringToiletries": "Bring your own toiletries",
-    "maxSession": "Maximum 15 minutes per session",
-    "keepSecure": "Keep personal items secure",
-    "keepClean": "Keep everything clean",
-    "respectWorkouts": "Respect others workouts",
-    "respectQuietHours": "Respect quiet hours after 22:00",
-    "veryFast": "Very fast",
-    "recommendedUse": "Recommended to use, instead of wasting mobile data",
-    "registerEasypark": "Register at the EASYPARK app",
-    "notGuaranteed": "Not guaranteed",
-    "cleanAfterUse": "Clean up after use",
-    "labelFood": "Label your food",
-    "goodForPrepping": "Good place for prepping your meals before going out"
-  },
-
-  "accessInstructions": {
-    "roomAccess": {
-      "step1": "Go to your assigned room door",
-      "step2": "Enter the 4-digit PIN on the keypad",
-      "step3": "Wait for the green light, then enter",
-      "step4": "Door will lock automatically after closing"
-    },
-    "facilityAccess": {
-      "step1": "Use your room PIN to access shared areas",
-      "step2": "Ensure your phone remains charged for digital access"
-    },
-    "appFeatures": {
-      "step1": "View facility usage analytics",
-      "step2": "Make secure payments via trusted providers (e.g., PayPal, Google Pay)",
-      "step3": "Access emergency protocols if needed",
-      "step4": "Order food from the app",
-      "step5": "Chat with our AI assistant",
-      "step6": "Report urgent issues directly to hostel staff"
-    },
-    "rfidSetup": {
-      "step1": "Pick up your RFID wristband at the kiosk after check-in",
-      "step2": "Tap the wristband on any RFID reader",
-      "step3": "Green light indicates successful access",
-      "step4": "Wear your wristband throughout your stay"
-    },
-    "backupAccess": {
-      "step1": "Use your mobile PIN if the wristband doesn't work",
-      "step2": "Contact staff for a replacement wristband (fees may apply)",
-      "step3": "Reactivation available via kiosk with ID verification"
-    },
-    "seamlessAccess": {
-      "step1": "Use your RFID wristband for all room and facility access",
-      "step2": "Enjoy real-time sync across all devices and systems",
-      "step3": "Wristband usage is tracked to improve service quality"
-    }
-  },
-
-  "safety": {
-    "security": "Security",
-    "quietHours": "Quiet Hours",
-    "payments": "Payments",
-    "securityTips": {
-      "tip1": "Never share your PIN or wristband",
-      "tip2": "Report lost wristbands or lost valuables immediately",
-      "tip3": "Lock your room when leaving",
-      "tip4": "Keep your valuables safe"
-    },
-    "quietHoursTips": {
-      "tip1": "Quiet hours: 22:00 - 07:00",
-      "tip2": "Keep noise to minimum during these hours",
-      "tip3": "Use headphones for entertainment",
-      "tip4": "Respect other guests' sleep"
-    },
-    "paymentsTips": {
-      "tip1": "Most services accept contactless payments",
-      "tip2": "Check connected payment solution in mobile app"
-    }
-  },
+  
   
   "admin-panel":{
     "title": "Admin Panel",

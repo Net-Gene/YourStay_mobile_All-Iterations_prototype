@@ -227,28 +227,28 @@ export function FacilityGuide({
       icon: Shield,
       title: t("facility-guide.safety.security"),
       points: [
-        t("facility-guide.safety.neverShare"),
-        t("facility-guide.safety.reportLost"),
-        t("facility-guide.safety.lockRoom"),
-        t("facility-guide.safety.keepValuables"),
+        t("facility-guide.safety.securityTips.tip1"),
+        t("facility-guide.safety.securityTips.tip2"),
+        t("facility-guide.safety.securityTips.tip3"),
+        t("facility-guide.safety.securityTips.tip4"),
       ],
     },
     {
       icon: Clock,
       title: t("facility-guide.safety.quietHours"),
       points: [
-        t("facility-guide.safety.quietHoursTime"),
-        t("facility-guide.safety.keepNoiseMin"),
-        t("facility-guide.safety.useHeadphones"),
-        t("facility-guide.safety.respectSleep"),
+        t("facility-guide.safety.quietHoursTips.tip1"),
+        t("facility-guide.safety.quietHoursTips.tip2"),
+        t("facility-guide.safety.quietHoursTips.tip3"),
+        t("facility-guide.safety.quietHoursTips.tip4"),
       ],
     },
     {
       icon: CreditCard,
       title: t("facility-guide.safety.payments"),
       points: [
-        t("facility-guide.safety.contactless"),
-        t("facility-guide.safety.checkPaymentApp"),
+        t("facility-guide.safety.paymentsTips.tip1"),
+        t("facility-guide.safety.paymentsTips.tip2"),
       ],
     },
   ];
@@ -268,7 +268,7 @@ export function FacilityGuide({
             : t("facility-guide.facilityGuide.fullIntegration")}
         </Badge>
         <Button
-          onClick={() => onNavigate("home")}
+          onClick={() => onNavigate("dahsboard")}
           className="flex items-center gap-1"
         >
           {t("facility-guide.common.back")}
