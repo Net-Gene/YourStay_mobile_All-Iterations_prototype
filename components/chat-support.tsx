@@ -27,9 +27,8 @@ interface Message {
 const quickQuestionsKeys = [
   "chat-support.chat.quickQuestions.wifi",
   "chat-support.chat.quickQuestions.breakfast",
-  "chat-support.chat.quickQuestions.laundry",
-  "chat-support.chat.quickQuestions.checkout",
-  "chat-support.chat.quickQuestions.metro",
+  "chat-support.chat.quickQuestions.showers",
+  "chat-support.chat.quickQuestions.bus",
 ];
 
 export function ChatSupport({
@@ -50,7 +49,7 @@ export function ChatSupport({
       text: t("chat-support.chat.greeting", {
         name: guestData?.firstName || t("chat-support.chat.guest"),
       }),
-      sender: "staff",
+      sender: "bot",
       timestamp: new Date(Date.now() - 5 * 60000),
     },
   ]);
@@ -58,6 +57,8 @@ export function ChatSupport({
   const [isTyping, setIsTyping] = useState(false);
   const [translationEnabled, setTranslationEnabled] = useState(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const [staffTalkEnabled, setStaffTalkEnabled] = useState(false);
+
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -93,47 +94,47 @@ export function ChatSupport({
     setIsTyping(true);
 
   setTimeout(() => {
-      // Simulate staff response
-      let staffText = t("chat-support.chat.responses.staffErrorResponse");
+      // Simulate bot response
+      let botText = t("chat-support.chat.responses.botErrorResponse");
 
       // Map quick questions to their response keys
       const quickQuestions = [
         { questionKey: "chat-support.chat.quickQuestions.wifi", responseKey: "chat-support.chat.responses.wifi" },
         { questionKey: "chat-support.chat.quickQuestions.breakfast", responseKey: "chat-support.chat.responses.breakfast" },
-        { questionKey: "chat-support.chat.quickQuestions.checkout", responseKey: "chat-support.chat.responses.checkout" },
-        { questionKey: "chat-support.chat.quickQuestions.laundry", responseKey: "chat-support.chat.responses.laundry" },
-        { questionKey: "chat-support.chat.quickQuestions.metro", responseKey: "chat-support.chat.responses.help" }
+        { questionKey: "chat-support.chat.quickQuestions.help", responseKey: "chat-support.chat.responses.help" },
+        { questionKey: "chat-support.chat.quickQuestions.bus", responseKey: "chat-support.chat.responses.bus" },
+        { questionKey: "chat-support.chat.quickQuestions.showers", responseKey: "chat-support.chat.responses.showers" }
       ];
 
       // Check if the user's message matches any translated quick question
       for (const { questionKey, responseKey } of quickQuestions) {
         const translatedQuestion = t(questionKey).toLowerCase();
         if (newMessage.toLowerCase().includes(translatedQuestion)) {
-          staffText = t(responseKey);
+          botText = t(responseKey);
           break;
         }
       }
 
-      let translatedText = staffText;
+      let translatedText = botText;
       let originalText: string | undefined = undefined;
 
       if (translationEnabled && language !== "en") {
-        translatedText = simulateTranslation(staffText, "en", language);
-        if (translatedText !== staffText) {
-          originalText = staffText;
+        translatedText = simulateTranslation(botText, "en", language);
+        if (translatedText !== botText) {
+          originalText = botText;
         }
       }
 
-      const staffMessage: Message = {
+      const botMessage: Message = {
         id: messages.length + 2,
         text: translatedText,
-        sender: "staff",
+        sender: staffTalkEnabled ? "staff" : "bot",
         timestamp: new Date(),
         translated: !!originalText,
         originalText,
       };
 
-      setMessages((prev) => [...prev, staffMessage]);
+      setMessages((prev) => [...prev, botMessage]);
       setIsTyping(false);
     }, 2000);
   };
@@ -141,12 +142,14 @@ export function ChatSupport({
   const handleQuickQuestion = (questionKey: string) => {
     setNewMessage(t(questionKey));
   };
+  
 
   return (
     <div className="space-y-4">
       <div className="text-center">
         <h2 className="text-2xl font-bold">{t("chat-support.chat.title")}</h2>
         <p className="text-muted-foreground">{t("chat-support.chat.subtitle")}</p>
+        
         <Button
           onClick={() => onNavigate("dashboard")}
           className="flex items-center gap-1"
@@ -174,6 +177,37 @@ export function ChatSupport({
                   ? t("chat-support.chat.on")
                   : t("chat-support.chat.off")}
               </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={
+                  () => {
+                    
+                    setStaffTalkEnabled((prev) => !prev)
+                    const staffMessage: Message = {
+                      id: messages.length + 1,
+                      text: staffTalkEnabled ? t("chat-support.chat.staffConnected") : t("chat-support.chat.staffDisconnected"), 
+                      sender: "staff",
+                      timestamp: new Date(),
+
+                    };
+                    setMessages((prev) => [...prev, staffMessage]);
+                    const botMessage: Message = {
+                        id: messages.length + 1,
+                        text: staffTalkEnabled ? t("chat-support.chat.botDisconnected") : t("chat-support.chat.botConnected"), 
+                        sender: "bot",
+                        timestamp: new Date(),
+
+                      };
+                      setMessages((prev) => [...prev, botMessage]);}
+                }
+                className="flex items-center gap-1"
+              >
+                <Headphones className="h-3 w-3" />
+                {staffTalkEnabled
+                  ? t("chat-support.chat.staffModeOn")
+                  : t("chat-support.chat.staffModeOff")}
+              </Button> 
               <Badge variant="secondary" className="flex items-center gap-1">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 {t("chat-support.chat.online")}
@@ -187,55 +221,80 @@ export function ChatSupport({
               {messages.map((message) => (
                 <div
                   key={message.id}
-                  className={`flex ${
+                  className={`flex-column w-fit ${
                     message.sender === "user" ? "justify-end" : "justify-start"
                   }`}
                 >
-                  <div
-                    className={`max-w-[80%] p-3 rounded-lg ${
-                      message.sender === "user"
-                        ? "bg-primary text-primary-foreground"
-                        : message.sender === "staff"
-                        ? "bg-blue-100 text-blue-900"
-                        : "bg-gray-100 text-gray-900"
-                    }`}
-                  >
-                    <div className="flex items-center gap-2 mb-1">
-                      {(() => {
-                        if (message.sender === "user") {
-                          return <User className="h-3 w-3" />;
-                        } else if (message.sender === "staff") {
-                          return <Headphones className="h-3 w-3" />;
-                        } else {
-                          return <Bot className="h-3 w-3" />;
-                        }
-                      })()}
-                      <span className="text-xs opacity-70">
-                        {message.timestamp.toLocaleTimeString("en-US", {
-                          hour: "2-digit",
-                          minute: "2-digit",
-                        })}
-                      </span>
-                      {message.translated && (
-                        <Globe className="h-3 w-3 opacity-70" />
-                      )}
-                    </div>
-                    <p className="text-sm">{message.text}</p>
-                    {message.originalText && (
-                      <p className="text-xs opacity-60 mt-1 italic">
-                        {t("chat-support.chat.original")}: {message.originalText}
-                      </p>
+                  <div className="flex items-center gap-2 mb-1">
+                    {(() => {
+                      if (message.sender === "user") {
+                        return (
+                          <User className="h-3 w-3" />
+                        );
+                      } else if (message.sender === "bot") {
+                        return (
+                          <Bot className="h-3 w-3" />
+                        );
+                      } else {
+                        return (
+                          <Headphones className="h-3 w-3 " />
+                        );
+                      }
+                    })()}
+                    <span className="text-xs opacity-70">
+                      {message.timestamp.toLocaleTimeString("en-US", {
+                        hour: "2-digit",
+                        minute: "2-digit",
+                      })}
+                    </span>
+                    {message.translated && (
+                      <Globe className="h-3 w-3 opacity-70" />
                     )}
                   </div>
+                  <div
+                    className={`
+                      mt-1 p-2 rounded-md text-sm whitespace-pre-wrap
+                      ${
+                        message.sender === "user"
+                          ? "bg-gray-400 "
+                          : message.sender === "bot"
+                          ? "bg-blue-100"
+                          : "bg-green-100"
+                      }
+                    `}
+                  >
+                    {message.text}
+                  </div>
+                  {message.originalText && (
+                    <p className="text-xs opacity-60 mt-1 italic">
+                      {t("chat-support.chat.original")}: {message.originalText}
+                    </p>
+                  )}
                 </div>
-              ))}
-
+            ))}
               {isTyping && (
                 <div className="flex justify-start">
                   <div className="bg-gray-100 text-gray-900 p-3 rounded-lg">
                     <div className="flex items-center gap-2">
-                      <Headphones className="h-3 w-3" />
-                      <span className="text-xs">{t("chat-support.chat.staffTyping")}</span>
+                      {(() => {
+                      if (!staffTalkEnabled) {
+                        return (
+                          <div>
+                            <Bot className="h-3 w-3" />
+                            <span className="text-xs">{t("chat-support.chat.botTyping")}</span>
+                          </div>
+                        );
+                      } else {
+                        return (
+                          <div>
+                            <Headphones className="h-3 w-3 " />
+                            <span className="text-xs">{t("chat-support.chat.staffTyping")}</span>
+                          </div>
+
+                        );
+                      }
+                    })()}
+                      
                     </div>
                   </div>
                 </div>
