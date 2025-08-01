@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { Suspense, useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -172,6 +172,8 @@ export default function HostelApp() {
   }
 
   return (
+    <Suspense fallback={<div>Loading app...</div>}>
+
     <div className="min-h-screen bg-background">
       <header className="border-b bg-card">
         <div className="container mx-auto px-4 py-3">
@@ -203,5 +205,7 @@ export default function HostelApp() {
 
       <main className="container mx-auto px-4 py-6 max-w-2xl">{renderView()}</main>
     </div>
+        </Suspense>
+
   )
 }
