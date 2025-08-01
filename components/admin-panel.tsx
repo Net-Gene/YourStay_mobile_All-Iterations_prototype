@@ -49,7 +49,7 @@ export function AdminPanel({ phase, language }: Readonly<AdminPanelProps>) {
       guest: "John D.",
       room: "101",
       items: ["Continental Breakfast"],
-      status: "preparing",
+      status: t("admin-panel.statuses.preparing"),
       time: "08:30",
     },
     {
@@ -57,7 +57,7 @@ export function AdminPanel({ phase, language }: Readonly<AdminPanelProps>) {
       guest: "Sarah M.",
       room: "205",
       items: ["Coffee", "Sandwich"],
-      status: "ready",
+      status: t("admin-panel.statuses.delivered"),
       time: "09:15",
     },
     {
@@ -65,7 +65,7 @@ export function AdminPanel({ phase, language }: Readonly<AdminPanelProps>) {
       guest: "Mike R.",
       room: "103",
       items: ["Full English"],
-      status: "delayed",
+      status: t("admin-panel.statuses.delayed"),
       time: "08:45",
     },
   ];
@@ -73,23 +73,23 @@ export function AdminPanel({ phase, language }: Readonly<AdminPanelProps>) {
   const cleaningTasks = [
     {
       room: "102",
-      status: "dirty",
-      guest: "Checked out",
-      priority: "high",
+      status: t("admin-panel.statuses.dirty"),
+      guest: t("admin-panel.statuses.checkedOut"),
+      priority: t("admin-panel.statuses.high"),
       assignedTo: "Maria",
     },
     {
       room: "204",
-      status: "cleaning",
-      guest: "Early checkout",
-      priority: "medium",
+      status: t("admin-panel.statuses.cleaning"),
+      guest: t("admin-panel.statuses.earlyCheckout"),
+      priority: t("admin-panel.statuses.medium"),
       assignedTo: "Carlos",
     },
     {
       room: "301",
-      status: "clean",
-      guest: "Ready for guest",
-      priority: "low",
+      status: t("admin-panel.statuses.medium"),
+      guest: t("admin-panel.statuses.readyForGuest"),
+      priority: t("admin-panel.statuses.low"),
       assignedTo: "Ana",
     },
   ];
@@ -99,25 +99,25 @@ export function AdminPanel({ phase, language }: Readonly<AdminPanelProps>) {
       id: 1,
       guest: "Emma W.",
       room: "107",
-      issue: "WiFi not working",
-      status: "open",
-      priority: "medium",
+      issue: t("admin-panel.statuses.wiFiNotWorking"),
+      status: t("admin-panel.statuses.open"),
+      priority: t("admin-panel.statuses.medium"),
     },
     {
       id: 2,
       guest: "David L.",
       room: "203",
-      issue: "Room key not working",
-      status: "inProgress",
-      priority: "high",
+      issue: t("admin-panel.statuses.roomKeyNotWorking"),
+      status: t("admin-panel.statuses.inProgress"),
+      priority: t("admin-panel.statuses.high"),
     },
     {
       id: 3,
       guest: "Lisa K.",
       room: "105",
       issue: "Noise complaint",
-      status: "resolved",
-      priority: "low",
+      status: t("admin-panel.statuses.resolved"),
+      priority: t("admin-panel.statuses.low"),
     },
   ];
 
@@ -383,7 +383,7 @@ export function AdminPanel({ phase, language }: Readonly<AdminPanelProps>) {
                     <div>
                       <div className="font-semibold">Mike R. - Room 103</div>
                       <div className="text-sm text-muted-foreground">
-                        {t("admin-panel.checkingOutTomorrow", { time: "11:00" })}
+                        {t("admin-panel.statuses.checkingOutTomorrow", { time: "11:00" })}
                       </div>
                     </div>
                     <Badge className="bg-yellow-100 text-yellow-800">
