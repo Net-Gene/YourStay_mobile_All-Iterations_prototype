@@ -88,6 +88,9 @@
       "bookingSource": "Booking Source",
       "verifyBooking": "Verify Booking",
       "digitalTravelCard": "Digital Travel Card",
+      "kioskIntegration": "Kiosk Integration",
+      "fullIntegration": "Full Integration",
+      "parallelSystems": "Parallel Systems",
       "firstName": "First Name",
       "lastName": "Last Name",
       "nationality": "Nationality",
@@ -174,7 +177,7 @@
     "quickActions": {
       "title": "Quick Actions",
       "chatSupport": "Chat Support",
-      "chatSupportDesc": "Get help from staff",
+      "chatSupportDesc": "Get help from our bot or staff",
       "foodOrdering": "Food Ordering",
       "foodOrderingDesc": "Order meals & snacks",
       "facilityGuide": "Facility Guide",
@@ -197,7 +200,7 @@
     "chat": {
       "title": "Chat Support",
       "greeting": "Hello, how can we assist you today?",
-      "subtitle": "Get help from our staff",
+      "subtitle": "Get help from our bot",
       "liveSupport": "AI Support",
       "online": "Online",
       "offline": "Offline",
@@ -205,24 +208,23 @@
       "on": "ON",
       "off": "OFF",
       "typePlaceholder": "Type your message...",
-      "staffTyping": "Staff is typing...",
+      "botTyping": "Bot is typing...",
       "original": "Original",
       "back": "Back",
       "quickQuestions": {
         "wifi": "What's the WiFi password?",
         "breakfast": "When is breakfast served?",
-        "laundry": "How do I do laundry?",
-        "checkout": "What time is checkout?",
-        "metro": "Where is the nearest metro?"
+        "showers": "Where are the showers?",
+        "bus": "Where is the nearest bus stop?"
+
       },
       "responses": {
-        "staffErrorResponse": "Sorry, I didn't understand that. Can you please rephrase?",
+        "botErrorResponse": "Sorry, I didn't understand that. Can you please rephrase?",
         "help": "I'll help you with that right away!",
-        "wifi": "The WiFi password is: hostel2024. You can connect to 'HostelGuest' network.",
-        "breakfast": "Breakfast is served from 7:00 AM to 10:00 AM in the common area. You can also order through the app!",
-        "checkout": "Checkout is at 11:00 AM. You can extend your stay through the app if rooms are available.",
-        "laundry": "The laundry room is on the ground floor. Washing costs €3, drying €2. Use your RFID wristband to pay."
-      }
+        "wifi": "You can connect to 'HostelGuest' network, but to attain the WiFi password you mustcomplete the learning course",
+        "breakfast": "Breakfast can be ordered in advance at any time through the app.",
+        "showers": "Showers are located on the downstairs floor.",
+        "bus": "The nearest bus stop is straight ahead on the left side of the street, near the hostel entrance."}
     }
   },
   
@@ -476,8 +478,15 @@
       "title": "System Performance"
     },
     "statuses": {
+      "wiFiNotWorking": "WiFi not working",
+      "roomKeyNotWorking": "Room key not working",
+      "checkedInToday": "Checked in today",
+      "checkingOutTomorrow": "Checking out tomorrow",
       "update": "Update",
       "priority": "Priority",
+      "checkedOut": "Checked out",
+      "readyForGuest": "Ready for guest",
+      "earlyCheckout": "Early checkout",
       "active": "Active",
       "ready": "Ready",
       "preparing": "Preparing",
@@ -487,6 +496,9 @@
       "dirty": "Dirty",
       "cleaning": "Cleaning",
       "open": "Open",
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low",
       "inProgress": "In Progress",
       "resolved": "Resolved",
       "lost": "Lost",
